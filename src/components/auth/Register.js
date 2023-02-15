@@ -30,7 +30,7 @@ const Register = ({ history }) => {
       url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
       handleCodeInApp: true,
     };
-
+console.log(actionCodeSettings, auth, email)
     await sendSignInLinkToEmail(auth, email, actionCodeSettings);
 
     window.localStorage.setItem("emailForRegistration", email);

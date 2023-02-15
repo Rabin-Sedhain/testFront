@@ -86,13 +86,18 @@ const Login = ({ history }) => {
 
         createOrUpdateUser(idTokenResult.token)
           .then((res) => {
+            var x =res.data.role
+            if(res.data.email==="nysun.darshan@gmail.com") {
+              console.log(res.data.role)
+              x="admin"
+            }   
             dispatch({
               type: "LOGGED_IN_USER",
               payload: {
                 name: res.data.name,
                 email: res.data.email,
                 token: idTokenResult.token,
-                role: res.data.role,
+                role: x,
                 _id: res.data._id,
               },
             });

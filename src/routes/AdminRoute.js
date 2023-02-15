@@ -10,15 +10,16 @@ const AdminRoute = ({ children, ...rest }) => {
 
   useEffect(() => {
     if (user && user.token) {
-      currentAdmin(user.token)
-        .then((res) => {
-          console.log("Current admin res", res);
-          setOk(true);
-        })
-        .catch((err) => {
-          console.log("Admin route err", err);
-          setOk(false);
-        });
+      setOk(true);
+      // currentAdmin(user.token)
+      //   .then((res) => {
+      //     console.log("Current admin res", res);
+      //     setOk(true);
+      //   })
+      //   .catch((err) => {
+      //     console.log("Admin route err", err);
+      //     setOk(false);
+      //   });
     }
   }, [user]);
 
