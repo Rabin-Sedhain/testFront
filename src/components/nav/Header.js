@@ -43,7 +43,7 @@ const Header = () => {
     <>
       <Card className="container mx-auto" bordered={false}>
         <Row align="top" gutter={[0, 16]} justify="center">
-          <Col
+          {/* <Col
             className="mt-1"
             lg={{ pull: 7 }}
             md={{ pull: 5 }}
@@ -87,7 +87,7 @@ const Header = () => {
             >
               <BehanceOutlined style={{ color: "#515af6" }} />
             </a>
-          </Col>
+          </Col> */}
 
           <Col>
             <Link to="/">
